@@ -24,7 +24,7 @@ Response measure: 100% af forespørgsler på andres data afvises (0 datalæk-hæ
 
 Cost
 
-Source: udvikler (dig)
+Source: udvikler
 Stimulus: skal tilføje en ny genbrugelig komponent, fx et nyt input-felt
 Environment: under normal videreudvikling af appen
 Artefact: Compose-komponentbiblioteket (ProfileInputRow, MeasureBox, osv.)
