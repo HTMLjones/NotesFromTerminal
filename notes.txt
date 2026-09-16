@@ -1,0 +1,33 @@
+Pick three quality attributes that matter most for your bring-your-own system:
+
+Personally i would say the three most important qualities from my perspective would be Performance, Security and definitly the cost of it all.
+
+Write one scenario per attribute, in the six-slot shape:
+
+Performance
+
+Source: en bruger
+Stimulus: åbner Guide-skærmen, som viser en liste af målinger via forEach
+Environment: normal drift, mellemstor telefon, 100+ målinger i listen
+Artefact: GuideViewModel + listevisningen i UI'et
+Response: skærmen renderer alle elementer og bliver scrollbar
+Response measure: interaktiv (scrollbar, ingen frosne frames) inden for 300 ms efter navigation
+
+Security
+
+Source: en ondsindet bruger eller kompromitteret enhed
+Stimulus: forsøger at tilgå eller ændre en anden brugers profildata
+Environment: normal drift, brugeren er logget ind med gyldig session
+Artefact: ProfilViewModel og dens dataadgang
+Response: adgang nægtes; kun egne data returneres
+Response measure: 100% af forespørgsler på andres data afvises (0 datalæk-hændelser)
+
+Cost
+
+Source: udvikler (dig)
+Stimulus: skal tilføje en ny genbrugelig komponent, fx et nyt input-felt
+Environment: under normal videreudvikling af appen
+Artefact: Compose-komponentbiblioteket (ProfileInputRow, MeasureBox, osv.)
+
+Trade off:
+performance og cost trader tydeligst af mod hinanden her — at skifte forEach ud med LazyColumn koster udviklingstid nu, men sparer performance-problemer senere; at lade stå til er billigere i dag, men dyrere i brugeroplevelse.
